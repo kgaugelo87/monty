@@ -10,11 +10,12 @@
 
 void pint(stack_t **head, unsigned int number)
 {
-	if (arguments->head == NULL)
+	if (*head == NULL)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", number);
-		free_all_args();
+		fclose(bus.file);
+		free(bus.content);
+		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	printf("%d\n", arguments->head->n);
-}
+	printf("%d\n", (*head)->n);
