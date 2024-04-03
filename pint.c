@@ -10,7 +10,6 @@
 
 void pint(stack_t **head, unsigned int number)
 {
-	(void) stack;
 	if (arguments->head == NULL)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", number);

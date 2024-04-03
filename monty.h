@@ -21,6 +21,18 @@ typedef struct stack_s
 } stack_t;
 
 /**
+ * free_all_args - frees all allocated memory
+ *
+ */
+
+void free_all_args(voic)
+{
+	close_stream();
+	free_tokens();
+	free_arguments();
+}
+
+/**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
  * @f: function to handle the opcode
