@@ -19,3 +19,4 @@ void pint(stack_t **head, unsigned int number)
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", (*head)->n);
+}
